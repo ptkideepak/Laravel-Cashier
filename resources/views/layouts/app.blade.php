@@ -58,6 +58,9 @@
                                     <a class="dropdown-item" href="{{ route('billing') }}">
                                         {{ __('Billing') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('add-stripe-customer') }}">
+                                        {{ __('Add Stripe Customer') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

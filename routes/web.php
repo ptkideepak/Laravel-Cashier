@@ -21,6 +21,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function(){
+    Route::get('add-stripe-customer', 'StripeCustomers@index')->name('add-stripe-customer');
+    Route::post('add-stripe-customer', 'StripeCustomers@store')->name('stripe.customer.store');
     Route::get('billing', 'BillingController@index')->name('billing');
     Route::get('checkout/{plan_id}', 'CheckoutController@checkout')->name('checkout');
     Route::post('checkout', 'CheckoutController@postCheckout')->name('checkout.process');
