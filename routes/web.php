@@ -32,3 +32,5 @@ Route::group(['middleware' => 'auth'], function(){
     Route::resource('payment-methods', 'PaymentMethodController');
 });
 
+
+Route::stripeWebhooks('stripe-webhook');
